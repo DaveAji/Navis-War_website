@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Goldman:wght@400;700&family=Saira:ital,wght@0,100..900;1,100..900&family=Stalinist+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+
+
+@font-face {
+  font-family: "Alien-Encounters-Solid-Bold";
+  src:
+    local("Alien-Encounters-Solid-Bold"),
+    url("/fonts/Alien-Encounters-Solid-Bold.ttf") format("truetype");
+}
+
+.pre-loader {
+  @apply absolute z-10;
+  width: 40vw;
+  /* height: 500px; */
+  top: calc(50% - (0.668 * 20vw));
+  left: calc(50% - 20vw);
+}
+
+.pre-loader > .overlay {
+  @apply absolute inset-x-0 bottom-0;
+  @apply top-full bg-black bg-opacity-10 -z-0;
+}
+
+.text-gradient {
+  background: linear-gradient(198.97deg, #FFFFFF 25.67%, #000000 149.68%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/* Mute button */
+#unmute {
+  font-size: 16px;
+  color: #eee;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: rgb(128, 128, 128, 0.5);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+#unmute.fade:hover {
+  opacity: 0.8;
+}
+
+.text-border-red{
+  -webkit-text-stroke: 3px #F20E0E
+}
+
+/* For medium-sized screens (tablets) */
+@media only screen and (max-width: 768px) {
+  /* Your styles for medium-sized screens go here */
+  .text-border-red{
+    -webkit-text-stroke: 1px #F20E0E
+  }
+}
+
+
+.text-border-gradient{
+  -webkit-text-stroke: 8px linear-gradient(132.21deg, #E02B2B 9.65%, #0B6AEB 91.58%),
+  linear-gradient(198.97deg, #FFFFFF 25.67%, #000000 149.68%);
+  background: linear-gradient(132.21deg, #E02B2B 9.65%, #0B6AEB 91.58%),
+  linear-gradient(198.97deg, #FFFFFF 25.67%, #000000 149.68%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 8px transparent;
+}
+
+/* Div with Cut out edges */
+.cutoutEdge {
+  position: relative;
+  width: 80%;
+  margin: 10% auto;
+  background: rgba(217, 217, 217, 0.1);
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+}
+.cutoutEdge:before,
+.cutoutEdge:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 10%;
+  height: 100.7%;
+}
+.cutoutEdge:before {
+  right: 100.1%;
+  background: inherit;
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-left: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+  transform-origin: bottom right;
+  transform: perspective(1px) rotateY(-0.15deg);
+}
+.cutoutEdge:after {
+  left: 100%;
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-right: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+  border-left: none;
+  background: inherit;
+  transform-origin: top left;
+  transform: perspective(1px) rotateY(0.15deg);
+}
+
+/* Cut out edge For the watch demo video */
+.cutoutEdge2 {
+  position: relative;
+  width: 80%;
+  margin: 10% auto;
+  background: rgba(217, 217, 217, 0.1);
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+}
+.cutoutEdge2:before,
+.cutoutEdge2:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 10%;
+  height: 100.7%;
+}
+.cutoutEdge2:before {
+  right: 100%;
+  background: url('/images/comingSoonHeaderBg2.jpeg') center/cover;
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-left: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+  transform-origin: bottom right;
+  transform: perspective(1px) rotateY(-0.15deg);
+}
+.cutoutEdge2:after {
+  left: 100%;
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-right: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+  border-left: none;
+  background: url('/images/comingSoonHeaderBg2.jpeg') center/cover;
+  transform-origin: top left;
+  transform: perspective(1px) rotateY(0.15deg);
+}
+
+
+
+/* cutout edge with brown background */
+.cutoutEdge-brown {
+  position: relative;
+  margin: 10% auto;
+  background: rgba(30, 11, 11, 0.5);
+  border-top: 2px solid rgba(30, 11, 11, 0.5);
+  border-bottom: 2px solid rgba(30, 11, 11, 0.5);
+}
+.cutoutEdge-brown:before,
+.cutoutEdge-brown:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 10%;
+  height: 102%;
+}
+.cutoutEdge-brown:before {
+  right: 100%;
+  background: inherit;
+  border-top: 2px solid rgba(30, 11, 11, 0.5);
+  border-left: 2px solid rgba(30, 11, 11, 0.5);
+  border-bottom: 2px solid rgba(30, 11, 11, 0.5);
+  transform-origin:  bottom right;
+  transform: perspective(1px) rotateY(-0.15deg);
+}
+.cutoutEdge-brown:after {
+  left: 100%;
+  border-top: 2px solid rgba(30, 11, 11, 0.5);
+  border-right: 2px solid rgba(30, 11, 11, 0.5);
+  border-bottom: 2px solid rgba(30, 11, 11, 0.5);
+  border-left: none;
+  background: inherit;
+  transform-origin: top left;
+  transform: perspective(1px) rotateY(0.15deg);
+}
+
+
+.center-absolute-content{
+  position: absolute;
+  /* width: 35%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Saira;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* cutout edge for social media */
+.cutoutEdgeSocial {
+  z-index: 20;
+  width: 60px;
+  margin: 10% auto;
+  background: 
+  linear-gradient(180.12deg, rgba(255, 255, 255, 0.46) 26.94%, rgba(255, 255, 255, 0) 136.75%);
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.cutoutEdgeSocial:before,
+.cutoutEdgeSocial:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  height: 101.4%;
+  z-index: 20;
+}
+.cutoutEdgeSocial:before {
+  right: 100.1%;
+  background: inherit;
+  border-top: 5px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform-origin: bottom right;
+  transform: perspective(3px) rotateY(-1.25deg);
+}
+.cutoutEdgeSocial:after {
+  left: 100%;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 5px solid #fff;
+  border-left: none;
+  background: inherit;
+  transform-origin: top left;
+  transform: perspective(3px) rotateY(1.25deg);
+}
+
+/* For medium-sized screens (tablets) */
+@media only screen and (max-width: 768px) {
+  .cutoutEdgeSocial {
+    width: 30px;
+    margin: 10% auto;
+    
+  }
+  .cutoutEdgeSocial:before,
+  .cutoutEdgeSocial:after {
+
+    width: 15px;
+  }
+
+}
+
+/* INput with cutout edge */
+.cutoutEdgeInput {
+  position: relative;
+  background: #D9D9D9;
+  border-top: 2px solid rgba(217, 217, 217, 1);
+  border-bottom: 2px solid rgba(217, 217, 217, 1);
+}
+.cutoutEdgeInput:before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  top: -2px;
+  width: 69%;
+  height: 106.7%;
+}
+.cutoutEdgeInput:before {
+  right: 99%;
+  background: inherit;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform-origin: bottom right;
+  transform: perspective(2px) rotateY(-1.25deg);
+}
+
+
+.child {
+  width: calc(100% + 16%); /* 100% + 2 * width of pseudo-elements */
+  height: 100%;
+  margin-left: -8%; /* Compensate for the width of :before pseudo-element */
+  margin-right: -8%;
+}
+
+
+/* spin */
+@keyframes customSpin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.custom-spin {
+  animation: customSpin 2s linear infinite; /* Adjust the duration (2s in this case) */
+}
+
+/* Move accross left */
+.move-accross {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  animation: move 35s linear infinite;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+/**
+*TEXT SCROLLING ANIMATION
+*/
+.wrapper {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Montserrat', monospace;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+.text-scrolling {
+  width: 100%;
+}
+
+.row {
+  overflow: hidden;
+  height: 60px;
+  position: relative;
+}
+
+.row p {
+  position: absolute;
+  min-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  top: 0; 
+  bottom: 0;
+  @media only screen and (max-width: 768px) {
+   min-width: 250%;
+  }
+}
+
+.row p span, 
+.row p:after {
+}
+
+
+.row-2 p {
+  animation: scrolling-type-2 15s infinite linear;
+  @media only screen and (max-width: 768px) {
+    animation: scrolling-type-2 10s infinite linear;
+  }
+}
+
+@keyframes scrolling-type-2 {
+  0% {
+    transform: translate(50%, 0%);
+    opacity: 0%;
+  }
+  10%{
+    opacity:100%;
+  }
+  90%{
+    opacity:100%;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0%;
+  }
+}
+
+
+
+/**
+*TEXT SCROLLING ANIMATION ENDS HERE
+*/
+
+@keyframes move {
+  50% {
+    left: calc(100vw - 50px); /* Adjust the distance if needed */
+  }
+  50.001% {
+    left: -50px; /* Adjust the distance if needed */
+  }
+}
+
+/* Move accross */
+.move-accross-right {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  animation: moveRight 35s linear infinite;
+  right: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes moveRight {
+  50% {
+    right: calc(100vw - 50px); /* Adjust the distance if needed */
+  }
+  50.001% {
+    right: -50px; /* Adjust the distance if needed */
+  }
+}
