@@ -117,11 +117,11 @@ const Page = () => {
                 <li><Link href="#community">COMMUNITY</Link> </li>
                 <li><Link href="#get-app">GET APP</Link> </li>
                 <li><Link href="#road-map">ROAD MAP</Link> </li>
-                <li><Link href="/">WAITLIST</Link> </li>
+                <li><Link href="https://forms.gle/E4fVYCaRfFJpuWJX7" target="_blank">WAITLIST</Link> </li>
               </ul>
               <div className="flex items-center gap-7 text-white font-Goldman text-sm font-normal leading-[20px]">
-                <Link href="">SIGN UP</Link>
-                <Button label="WHITE PAPER" />
+                <Link href="https://forms.gle/E4fVYCaRfFJpuWJX7" target="_blank">SIGN UP</Link>
+                <Button disabled={true} label="WHITE PAPER" />
             </div>
         </nav>
         {/* Mobile nav */}
@@ -179,7 +179,7 @@ const Page = () => {
             <div role="button" onClick={()=>{}} className={`flex justify-center cursor-pointer`}>
               <div className="relative">
               <Image alt="" className={`h-full`} src={ButtonImg} priority />
-              <p className="center-absolute-content w-full text-center font-Saira text-[12px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>GET NOTIFIED</p>
+              <p onClick={()=>window.open('https://forms.gle/E4fVYCaRfFJpuWJX7', '_blank')} className="center-absolute-content w-full text-center font-Saira text-[12px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>GET NOTIFIED</p>
             </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ const Page = () => {
               <div className="relative h-[66px]">
               <Image alt="" className={`h-[66px] object-cover `} src={ButtonImg} priority />
               
-              <p className="center-absolute-content w-full text-center font-Saira text-[14px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>GET NOTIFIED</p>
+              <p onClick={()=>window.open('https://forms.gle/E4fVYCaRfFJpuWJX7', '_blank')} className="center-absolute-content w-full text-center font-Saira text-[14px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>GET NOTIFIED</p>
             </div>
             </div>
           </div>
@@ -339,10 +339,10 @@ const Page = () => {
           <div 
             className="fixed left-5 md:left-8 top-[30%] md:p-3 !py-10 cutoutEdgeSocial z-[1] min-h-[100px] flex flex-col gap-10"
           >
-            <Image src={xIcon} alt="" onClick={()=>window.open('https://x.com/naviswargame?t=EpROkGC7epzPanrTqvs3qw&s=08', "_blank")} className="cursor-pointer" />
-            <Image src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} className="cursor-pointer" alt=""  />
-            <Image src={discordIcon} onClick={()=>window.open('https://discord.gg/nqtkgTMk', "_blank")} className="cursor-pointer" alt="" />
-            <Image src={instagramIcon} onClick={()=>window.open('https://www.instagram.com/naviswargame/', "_blank")} className="cursor-pointer" alt="" />
+            <Image role="link" src={xIcon} alt="" onClick={()=>window.open('https://x.com/naviswargame?t=EpROkGC7epzPanrTqvs3qw&s=08', "_blank")} className="cursor-pointer" />
+            <Image role="link" src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} className="cursor-pointer" alt=""  />
+            <Image role="link" src={discordIcon} onClick={()=>window.open('https://discord.gg/ujeY9vd5PA', "_blank")} className="cursor-pointer" alt="" />
+            <Image role="link" src={instagramIcon} onClick={()=>window.open('https://www.instagram.com/naviswargame/', "_blank")} className="cursor-pointer" alt="" />
           </div>
         </div>
         {/* road map */}
@@ -370,8 +370,8 @@ const Page = () => {
           <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-16" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
             <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">GAME CONCEPT</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 w-9/12 gap-10 mx-auto">
-              <div {...Animate('flip-left', 100, 'ease-in')} className="h-[300px]">
-                <Image src={GameConcept1} alt="image"/>
+              <div {...Animate('flip-left', 100, 'ease-in')} className="h-[280px] ">
+                <Image layout="fill" objectFit="cover" src={GameConcept1} alt="image"/>
               </div>
               <div {...Animate('flip-left', 400, 'ease-in')} className="h-[300px]"> <Image src={GameConcept2} alt="image"/></div>
               <div {...Animate('flip-left', 700, 'ease-in')} className="h-[300px]"> <Image src={GameConcept3} alt="image"/></div>
@@ -399,7 +399,7 @@ const Page = () => {
               <div {...Animate('flip-right', 700, 'ease-in')} className="h-[300px]"><Image src={MarketPlace3} alt="image"/></div>
             </div>
 
-            <Button containerClassName="mt-64" label="LEARN MORE"/>
+            <Button disabled containerClassName="mt-64" label="LEARN MORE"/>
             <div {...Animate('slide-left', 100, 'ease-in')} className="custom-spin absolute top-[-200px] right-0 z-[1] w-[150px] h-[75px] md:w-[300px] md:h-[150px]">
               <Image  src={WarSubmarine} alt="" fill className="" />
             </div>
@@ -429,14 +429,14 @@ const Page = () => {
                     sailor, the seas await your command.
                 </p>
                 <div className="flex flex-col md:flex-row gap-3 my-4">
-                  <button className="bg-black flex rounded-md border border-white py-2 px-5 gap-3 items-center">
+                  <button disabled className="bg-gray-400 flex rounded-md border border-white py-2 px-5 gap-3 items-center cursor-no-drop">
                     <Image alt="" src={AppleLogo} />
                     <p className="text-sm font-normal">
                       Download on the 
                       <span className="block text-xl">App Store</span>
                     </p>
                   </button>
-                  <button className="bg-black flex rounded-md border border-white py-2 px-5 gap-3 items-center">
+                  <button disabled className="bg-gray-400 flex rounded-md border border-white py-2 px-5 gap-3 items-center cursor-no-drop">
                     <Image src={PlaystoreLogo} alt="" />
                     <p className="text-sm font-normal">
                     GET IT ON
@@ -515,28 +515,30 @@ const Page = () => {
                   <Link href="#about">About</Link>
                 </li>
                 <li className="">
-                <Link href="/">Download links</Link>
+                <CustomLink href="/" isDisabled={true} label="Download links" />
                 </li>
                 <li className="">
-                <Link href="/">Career</Link>
+                <CustomLink href="/" isDisabled={true} label="Career" />
                 </li>
                 <li className="">
-                <Link href="/">Privacy policy /Legal</Link>
+                <CustomLink href="/" isDisabled={true} label="Privacy policy /Legal" />
                 </li>
                 <li className="">
                 <Link href="/">Waitlist</Link>
                 </li>
                 <li className="">
-                <Link href="/">Agreement</Link>
+                <CustomLink href="/" isDisabled={true} label="Agreement" />
                 </li>
                 <li className="">
                 <Link href="#get-app">Get the App</Link>
                 </li>
                 <li className="">
-                <Link href="/">Terms and Condition</Link>
+                <CustomLink href="/" isDisabled={true} label="Terms and Condition" />
+
+                {/* CustomLink */}
                 </li>
                 <li className="">
-                <a href="https://medium.com/@naviswar816" target="_blank">Newsletter</a>
+                <a href="https://medium.com/@naviswar" target="_blank">Newsletter</a>
                 </li>
                 <li className="">
                 <a target="_blank" href="mailto:info@naviswar.com">Contact us</a>
@@ -551,10 +553,10 @@ const Page = () => {
                     <Button label="SUBSCRIBE" />
                   </div>
                   <div className="flex gap-3 mt-4">
-                    <Image src={xIcon} onClick={()=>window.open('https://x.com/naviswargame?t=EpROkGC7epzPanrTqvs3qw&s=08', '_blank')} alt="" />
-                    <Image src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} alt="" />
-                    <Image src={discordIcon} onClick={()=>window.open('https://discord.gg/nqtkgTMk', "_blank")} alt="" />
-                    <Image src={instagramIcon} onClick={()=>window.open('https://www.instagram.com/naviswargame/', '_blank')} alt="" />
+                    <Image role="link" className="cursor-pointer" src={xIcon} onClick={()=>window.open('https://x.com/naviswargame?t=EpROkGC7epzPanrTqvs3qw&s=08', '_blank')} alt="" />
+                    <Image role="link" className="cursor-pointer" src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} alt="" />
+                    <Image role="link" className="cursor-pointer" src={discordIcon} onClick={()=>window.open('https://discord.gg/ujeY9vd5PA', "_blank")} alt="" />
+                    <Image role="link" className="cursor-pointer" src={instagramIcon} onClick={()=>window.open('https://www.instagram.com/naviswargame/', '_blank')} alt="" />
                   </div>
               </div>
                   <div className="w-[12.375rem] h-[4.1156rem] ml-20 cursor-pointer">
@@ -576,6 +578,16 @@ const Page = () => {
       </div>
     </>
   )
+}
+
+const CustomLink = ({isDisabled, href, label }: {isDisabled: boolean, href: string, label: string}) => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (isDisabled) {
+      event.preventDefault();
+    }
+    // Additional click handling logic can go here
+  };
+  return <Link href={href} onClick={handleClick} className={`${isDisabled ?'text-gray-500 cursor-no-drop':'text-white'}`}>{label}</Link>
 }
 
 export default Page

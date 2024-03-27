@@ -419,3 +419,9 @@ html {
     right: -50px; /* Adjust the distance if needed */
   }
 }
+
+
+/*  */
+.image-filter {
+  filter: grayscale(100%);
+}

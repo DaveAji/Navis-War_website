@@ -9,7 +9,7 @@ import AOSComponent from '../src/hooks/useAOS'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Nav War',
+  title: 'Navis War',
   description: 'Your favorite metaverse',
 }
 
