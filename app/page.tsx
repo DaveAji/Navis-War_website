@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 import { 
+  BlueBackground,
   RoadMap2, 
   NavLogo, 
   LogoSectionLanding, 
@@ -34,6 +35,9 @@ import {
   telegramIcon,
   discordIcon,
   instagramIcon,
+  LinkedInIcon,
+  CoinStore,
+  CoinFluence,
   // Team1,
   // Team2,
   // Team3,
@@ -159,14 +163,14 @@ const Page = () => {
           </div>
         </section>
         {/* Header section */}
-        <div id="" className="bg-coverr bg-center min-h-screen flex py-10 md:py-0 items-center justify-center"
+        <div id="" className="bg-cover bg-center min-h-screen flex py-10 md:py-0 items-center justify-center"
         style={{ backgroundImage: `url('/images/heroBG.jpeg')` }}>
           <div className="text-white text-center w-11/12 md:w-full mx-auto">
           <h3 className="font-Coda text-[1.25rem] md:text-6xl font-extrabold mb-1 md:mb-5 text-border-red text-gradient">
             GET{'   '}&nbsp; READY {'   '}&nbsp;TO
           </h3>
           <h2 className="font-Stalinist text-[2.5rem] md:text-8xl font-normal text-border-gradient">BATTLE</h2>
-          <p className="text-white text-xs md:text-lg font-semibold mb-16">
+          <p className="text-white text-xs md:text-lg font-semibold mb-24 pt-6">
             Join the fray in Navis War, a gripping naval battle game that immerses you in the heart of intense <br className="hidden md:block" />
             sea warfare. Assemble your fleet, strategize your moves, and engage in epic battles against <br className="hidden md:block" />
               formidable opponents.
@@ -199,7 +203,7 @@ const Page = () => {
         </div>
         {/* LOGO section */}
         <div
-          className="md:min-h-96 bg-cover bg-center flex py-14 md:py-0 justify-center items-center" 
+          className="md:min-h-96 bg-cover bg-center flex py-14 md:py-0 justify-center items-center " 
           style={{ backgroundImage: `url('/images/bg2.jpeg')` }}
         >
           <div {...Animate('zoom-in', 100, 'ease-in')} className="w-[80%] md:w-[30%] h-[100px] md:h-fit">
@@ -343,6 +347,7 @@ const Page = () => {
             <Image role="link" src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} className="cursor-pointer" alt=""  />
             <Image role="link" src={discordIcon} onClick={()=>window.open('https://discord.gg/ujeY9vd5PA', "_blank")} className="cursor-pointer" alt="" />
             <Image role="link" src={instagramIcon} onClick={()=>window.open('https://www.instagram.com/naviswargame/', "_blank")} className="cursor-pointer" alt="" />
+            <Image role="link" src={LinkedInIcon} onClick={()=>window.open('https://www.linkedin.com/company/navis-war-game/', "_blank")} className="cursor-pointer" alt="" />
           </div>
         </div>
         {/* road map */}
@@ -472,9 +477,9 @@ const Page = () => {
               </div>
             </div>
             </div>
-            <div {...Animate('slide-right', 100, 'ease-in')} className="move-accross absolute bottom-[-100px] left-0 z-[1] w-[150px] h-[75px] md:w-[300px] md:h-[150px]">
+            {/* <div {...Animate('slide-right', 100, 'ease-in')} className="move-accross absolute bottom-[-100px] left-0 z-[1] w-[150px] h-[75px] md:w-[300px] md:h-[150px]">
               <Image  src={WarTank} alt="" className="" />
-            </div>
+            </div> */}
           </div>
         </div>
         {/* team */}
@@ -505,6 +510,21 @@ const Page = () => {
             </div>
           </div>
         </div> */}
+        {/* Partnerships */}
+        <div className="min-h-screen bg-black py-24 relative">
+        <Image width={500} height={500} src={BlueBackground} alt="" className="absolute bottom-0 z-0"/>
+          <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-36 md:py-16 relative z-10" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
+            <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">PARTNERSHIPS</h3>
+            <div className="flex justify-center gap-10">
+            <Image width={250} height={250} role="link" className="" src={CoinStore} alt="partnership_coinstore" />
+            <Image width={250} height={250} role="link" className="" src={CoinFluence} alt="partnership_coinfluence" />
+            </div>
+          </div>
+          <div {...Animate('slide-left', 100, 'ease-in')} className="custom-spin absolute top-[-200px] left-0 z-[1] w-[150px] h-[75px] md:w-[300px] md:h-[150px]">
+              <Image  src={WarSubmarine} alt="" fill className="" />
+            </div>
+          
+        </div>
         {/* footer */}
         <footer className="bg-primary-100 text-white font-Saira">
           <div className="w-[80%] mx-auto py-24 flex flex-col md:flex-row">
@@ -557,6 +577,7 @@ const Page = () => {
                     <Image role="link" className="cursor-pointer" src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} alt="" />
                     <Image role="link" className="cursor-pointer" src={discordIcon} onClick={()=>window.open('https://discord.gg/ujeY9vd5PA', "_blank")} alt="" />
                     <Image role="link" className="cursor-pointer" src={instagramIcon} onClick={()=>window.open('https://www.instagram.com/naviswargame/', '_blank')} alt="" />
+                    <Image role="link" className="cursor-pointer" src={LinkedInIcon} onClick={()=>window.open('https://www.linkedin.com/company/navis-war-game/', '_blank')} alt="" />
                   </div>
               </div>
                   <div className="w-[12.375rem] h-[4.1156rem] ml-20 cursor-pointer">

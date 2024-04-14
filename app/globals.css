@@ -225,7 +225,7 @@ html {
   position: absolute;
   top: -2px;
   width: 20px;
-  height: 101.4%;
+  height: 101%;
   z-index: 20;
 }
 .cutoutEdgeSocial:before {

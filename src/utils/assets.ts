@@ -15,6 +15,7 @@ import Team4 from '../../public/images/team4.png'
 import Roadmap from '../../public/images/roadMap.png'
 import PaginateRight from '../../public/images/paginateRight.png'
 import PaginateLeft from '../../public/images/paginateLeft.png'
+import BlueBackground from '../../public/images/blueBackground.png'
 
 import LeftBottom from '../../public/images/leftBottom.webp'
 import RightTop from '../../public/images/rightTop.webp'
@@ -47,10 +48,17 @@ import xIcon from '../../public/images/xIcon.svg'
 import telegramIcon from '../../public/images/telegramIcon.svg'
 import discordIcon from '../../public/images/discordIcon.svg'
 import instagramIcon from '../../public/images/instagramIcon.svg'
+import LinkedInIcon from '../../public/images/LinkedInIcon.svg'
 import MobileHamburger from '../../public/images/mobileHamburger.svg'
 import RightArrow from '../../public/images/rightArrow.svg'
+import CoinStore from '../../public/images/partnership_coinstore.svg'
+import CoinFluence from '../../public/images/partnership_coinfluence.svg'
 
 export {
+  BlueBackground,
+  CoinStore,
+  CoinFluence,
+  LinkedInIcon,
   ComingSoonMaze,
   NavisWarLogo, 
   JoinWaitListbtn, 
