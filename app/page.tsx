@@ -371,7 +371,9 @@ const Page = () => {
             <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">GAME CONCEPT</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 w-9/12 gap-10 mx-auto">
               <div {...Animate('flip-left', 100, 'ease-in')} className="h-[280px] ">
-                <Image layout="fill" objectFit="cover" src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449102/NavisWebsite/gameConcept12_rxccky.png'} alt="image"/>
+              <div className="relative w-full h-full">
+              <img src="https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449102/NavisWebsite/gameConcept12_rxccky.png" alt="image" className=" w-full h-full object-cover"/>
+            </div>
               </div>
               <div {...Animate('flip-left', 400, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449015/NavisWebsite/gameConcept2_ghrlpw.jpg'} alt="image"/></div>
               <div {...Animate('flip-left', 700, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449015/NavisWebsite/gameConcept3_u0lwph.jpg'} alt="image"/></div>
@@ -502,7 +504,10 @@ const Page = () => {
         </div> */}
         {/* Partnerships */}
         <div className="min-h-screen bg-black py-24 relative">
-        <Image width={500} height={500} src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713450897/NavisWebsite/blueBackground_ar4jjf.png'} alt="" className="absolute bottom-0 z-0"/>
+        <div className="absolute bottom-0 z-0 w-[500px] h-[500px]">
+          <img src="https://res.cloudinary.com/dmtcjnlev/image/upload/v1713450897/NavisWebsite/blueBackground_ar4jjf.png" alt="" className=" w-full h-full object-cover"/>
+      </div>
+
           <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-36 md:py-16 relative z-10" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
             <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">PARTNERSHIPS</h3>
             <div className="flex justify-center gap-10">
