@@ -25,7 +25,14 @@ const Button: React.FC<ButtonProps> = ({
       {disabled && <div className="absolute top-0 left-0 right-0 bottom-0 z-10 cursor-no-drop opacity-50">
       </div>}
       <div className="relative">
-      <Image alt="" className={`h-full ${disabled && 'image-filter'}`} src={ButtonImg} priority />
+      <img 
+        alt="" 
+        className={`h-full ${disabled && 'image-filter'}`} 
+        src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713428922/NavisWebsite/ButtonImg_fkidd2.png'}  
+        // layout="fill"
+        // objectFit="cover" 
+        // priority 
+      />
       <p className="center-absolute-content w-full text-center font-Saira text-[12px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>{label}</p>
     </div>
     </div>

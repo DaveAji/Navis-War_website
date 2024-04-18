@@ -49,16 +49,14 @@ import {
   RightTop,
   ButtonImg,
   RightArrow
-  } from "@/src/utils/assets"
+  } from "../src/utils/assets"
 import {Button} from '../src/components'
 import {Animate} from '../src/utils'
 import useWindowSize from '../src/hooks/useWindowSize'
 
 
 const Page = () => {
-  const [isMobile, setIsMobile] = useState(false)
   const [width] = useWindowSize();
-  const [isMobileView, setIsMobileView] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const firstDivRef = useRef<HTMLDivElement | null>(null);
   const secondDivRef = useRef<HTMLDivElement | null>(null);
@@ -66,11 +64,9 @@ const Page = () => {
 
   useEffect(() => {
     if (width && width < 768) {
-      setIsMobileView(true);
       setSidebarOpen(false);
     }
     if (width && width > 768) {
-      setIsMobileView(false);
       setSidebarOpen(false);
     }
   }, [width]);
@@ -182,7 +178,7 @@ const Page = () => {
             {/* <Button label="GET NOTIFIED" /> */}
             <div role="button" onClick={()=>{}} className={`flex justify-center cursor-pointer`}>
               <div className="relative">
-              <Image alt="" className={`h-full`} src={ButtonImg} priority />
+              <img alt="" className={`h-full`} src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713428922/NavisWebsite/ButtonImg_fkidd2.png'}   />
               <p onClick={()=>window.open('https://forms.gle/E4fVYCaRfFJpuWJX7', '_blank')} className="center-absolute-content w-full text-center font-Saira text-[12px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>GET NOTIFIED</p>
             </div>
             </div>
@@ -193,8 +189,7 @@ const Page = () => {
             <input className="bg-secondary-300 h-[66px] block md:hidden  border-secondary-300 md:w-[30%] outline-none focus:outline-none active:outline-none text-black focus:text-black" placeholder="Your Email" type="text" />
             <div role="button" onClick={()=>{}} className={`flex justify-center cursor-pointer w-[27%] h-[66px]`}>
               <div className="relative h-[66px]">
-              <Image alt="" className={`h-[66px] object-cover `} src={ButtonImg} priority />
-              
+              <img alt="" className={`h-[66px] object-cover `} src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713428922/NavisWebsite/ButtonImg_fkidd2.png'}/>
               <p onClick={()=>window.open('https://forms.gle/E4fVYCaRfFJpuWJX7', '_blank')} className="center-absolute-content w-full text-center font-Saira text-[14px] md:text-lg font-medium leading-[20px] text-white capitalize" style={{ whiteSpace: 'nowrap' }}>GET NOTIFIED</p>
             </div>
             </div>
@@ -217,7 +212,7 @@ const Page = () => {
               <h3 className="pb-20 text-center font-Alien  font-normal text-gradient text-lg md:text-6xl">ABOUT NAVIS WAR</h3>
               <div className="flex gap-24 flex-col md:flex-row">
                 <div {...Animate('zoom-in', 100, 'ease-in')} className="w-full  md:w-[50%] ">
-                  <Image src={AboutNavisImg} className="w-full" alt=""/>
+                  <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713448629/NavisWebsite/aboutNavisImg_cutdbj.png'} className="w-full" alt=""/>
                 </div>
                 <div {...Animate('zoom-in', 100, 'ease-in')} className="w-full md:w-[50%]">
                   <p className="w-full font-Saira text-[1.25rem] text-center md:text-left font-normal leading-[2.4375rem] mb-16">
@@ -248,7 +243,7 @@ const Page = () => {
               <h3 {...Animate('fade-left', 100, 'ease-in')} className="pb-20 text-center text-gradient text-lg md:text-6xl font-Alien font-normal mb-10">HOW TO PLAY</h3>
               <div className="relative h-[80%]">
                 <div {...Animate('zoom-in', 100, 'ease-in')} className="w-full md:w-[50%] mx-auto relative">
-                  <Image src={HowToPlay} className="w-full" alt="" />
+                  <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713448712/NavisWebsite/howToPlay_o8qp8x.png'} className="w-full" alt="" />
                 <div {...Animate('fade-down-right', 100, 'ease-in')} className="md:absolute text-center md:text-left top-[-68px] left-[-296px] mb-10">
                   <h5 className="text-gradient font-Alien text-[2rem] font-normal">MULTIPLAYER</h5>
                   <ul className="list-disc font-Saira text-sm font-normal leading-[27px]">
@@ -376,13 +371,13 @@ const Page = () => {
             <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">GAME CONCEPT</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 w-9/12 gap-10 mx-auto">
               <div {...Animate('flip-left', 100, 'ease-in')} className="h-[280px] ">
-                <Image layout="fill" objectFit="cover" src={GameConcept1} alt="image"/>
+                <Image layout="fill" objectFit="cover" src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449102/NavisWebsite/gameConcept12_rxccky.png'} alt="image"/>
               </div>
-              <div {...Animate('flip-left', 400, 'ease-in')} className="h-[300px]"> <Image src={GameConcept2} alt="image"/></div>
-              <div {...Animate('flip-left', 700, 'ease-in')} className="h-[300px]"> <Image src={GameConcept3} alt="image"/></div>
-              <div {...Animate('flip-left', 1000, 'ease-in')} className="h-[300px]"> <Image src={GameConcept4} alt="image"/></div>
-              <div {...Animate('flip-left', 1300, 'ease-in')} className="h-[300px]"> <Image src={GameConcept5} alt="image"/></div>
-              <div {...Animate('flip-left', 1600, 'ease-in')} className="h-[300px]"> <Image src={GameConcept6} alt="image"/></div>
+              <div {...Animate('flip-left', 400, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449015/NavisWebsite/gameConcept2_ghrlpw.jpg'} alt="image"/></div>
+              <div {...Animate('flip-left', 700, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449015/NavisWebsite/gameConcept3_u0lwph.jpg'} alt="image"/></div>
+              <div {...Animate('flip-left', 1000, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449020/NavisWebsite/gameConcept4_ng2hg7.jpg'} alt="image"/></div>
+              <div {...Animate('flip-left', 1300, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449031/NavisWebsite/gameConcept5_i9esfy.jpg'} alt="image"/></div>
+              <div {...Animate('flip-left', 1600, 'ease-in')} className="h-[300px]"> <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449015/NavisWebsite/gameConcept2_ghrlpw.jpg'} alt="image"/></div>
             </div>
           </div>
         </div>
@@ -391,17 +386,15 @@ const Page = () => {
           <div className="min-h-[100vh] bg-cover bg-center text-center text-white py-16 relative" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
             <h3 {...Animate('slide-down', 100, 'ease-in')} className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">MARKETPLACE</h3>
             <div className="justify-end gap-3  w-10/12 mx-auto mb-7 hidden md:flex">
-            <Image role="button" alt="" src={PaginateLeft} />
-            <Image role="button" alt="" src={PaginateRight} />
-            {/* PaginateLeft,
-    PaginateRight */}
+            <img role="button" alt="" src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449745/NavisWebsite/paginateLeft_v8woj6.png'} />
+            <img role="button" alt="" src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449751/NavisWebsite/paginateRight_j3u5vv.png'} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 w-10/12 gap-32 md:gap-7 mx-auto">
               <div {...Animate('flip-right', 100, 'ease-in')} className="h-[300px]">     
-              <Image src={MarketPlace1} alt="image"/>
+              <img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449879/NavisWebsite/marketPlace1_idyhfr.png'} alt="image"/>
               </div>
-              <div {...Animate('flip-right', 400, 'ease-in')} className="h-[300px]"><Image src={MarketPlace2} alt="image"/></div>
-              <div {...Animate('flip-right', 700, 'ease-in')} className="h-[300px]"><Image src={MarketPlace3} alt="image"/></div>
+              <div {...Animate('flip-right', 400, 'ease-in')} className="h-[300px]"><img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449890/NavisWebsite/marketPlace2_pzyrhy.png'} alt="image"/></div>
+              <div {...Animate('flip-right', 700, 'ease-in')} className="h-[300px]"><img src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713449920/NavisWebsite/marketPlace3_nt4ylj.png'} alt="image"/></div>
             </div>
 
             <Button disabled containerClassName="mt-64" label="LEARN MORE"/>
@@ -416,13 +409,10 @@ const Page = () => {
             <h3 {...Animate('slide-down', 100, 'ease-in')} className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">GET THE APP</h3>
             <div className="flex flex-col md:flex-row w-9/12 gap-7 mx-auto">
               <div {...Animate('slide-right', 100, 'ease-in')} className="w-full md:w-[50%] mx-auto flex justify-center">
-                <Image 
-                  alt="mobile phone" 
-                  height={500}
-                  objectFit="cover" 
-                  src={MobileApp} 
-                  className="" 
-                />
+              <div className="h-[500px] relative overflow-hidden">
+                <img src="https://res.cloudinary.com/dmtcjnlev/image/upload/v1713450174/NavisWebsite/mobileApp_kqmhue.png" alt="mobile phone" className="w-full h-full object-cover"/>
+              </div>
+
               </div>
               <div {...Animate('slide-left', 100, 'ease-in')} className="h-[300px] w-full md:w-[50%] text-left pt-16">
                 <p className="font-Saira text-sm font-normal leading-[27px] text-center md:text-left">
@@ -466,8 +456,8 @@ const Page = () => {
             <h3 {...Animate('slide-down', 100, 'ease-in')} className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">GAME DEMO</h3>
             <div className="flex w-9/12 gap-7 mx-auto">
             <div className="cutoutEdge2 relative min-h-[500px]">
-              <Image alt="" src={LeftBottom} className="absolute bottom-[-19px] left-[-40px] md:bottom-[-30px] md:left-[-120px]"/>
-              <Image alt="" src={RightTop} className="absolute top-[-17px] right-[-40px] md:top-[-30px] md:right-[-120px]"/>
+              <img alt="" src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713450496/NavisWebsite/leftBottom_rzwx89.webp'} className="absolute bottom-[-19px] left-[-40px] md:bottom-[-30px] md:left-[-120px]"/>
+              <img alt="" src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713450496/NavisWebsite/rightTop_rrq0tu.webp'} className="absolute top-[-17px] right-[-40px] md:top-[-30px] md:right-[-120px]"/>
               <div className="w-full h-full">
                 <video className="inset-0 w-full h-full object-cover" loop muted>
                   <source src="https://d3sorfw0bi0jra.cloudfront.net/navwarVideo.mp4" type="video/mp4" />
@@ -512,7 +502,7 @@ const Page = () => {
         </div> */}
         {/* Partnerships */}
         <div className="min-h-screen bg-black py-24 relative">
-        <Image width={500} height={500} src={BlueBackground} alt="" className="absolute bottom-0 z-0"/>
+        <Image width={500} height={500} src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713450897/NavisWebsite/blueBackground_ar4jjf.png'} alt="" className="absolute bottom-0 z-0"/>
           <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-36 md:py-16 relative z-10" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
             <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">PARTNERSHIPS</h3>
             <div className="flex justify-center gap-10">
