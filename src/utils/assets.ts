@@ -1,19 +1,4 @@
-import ButtonImg from '../../public/images/ButtonImg.png'
-import AboutNavisImg from '../../public/images/aboutNavisImg.png'
-import HowToPlay from '../../public/images/howToPlay.png'
-import GameConcept1 from '../../public/images/gameConcept12.png'
-import GameConcept2 from '../../public/images/gameConcept2.jpeg'
-import GameConcept3 from '../../public/images/gameConcept3.jpeg'
-import GameConcept4 from '../../public/images/gameConcept4.jpeg'
-import GameConcept5 from '../../public/images/gameConcept5.jpeg'
-import GameConcept6 from '../../public/images/gameConcept6.jpeg'
-import PaginateRight from '../../public/images/paginateRight.png'
-import PaginateLeft from '../../public/images/paginateLeft.png'
-import MarketPlace1 from '../../public/images/marketPlace1.png'
-import MarketPlace2 from '../../public/images/marketPlace2.png'
-import MarketPlace3 from '../../public/images/marketPlace3.png'
-import MobileApp from '../../public/images/mobileApp.png'
-import BlueBackground from '../../public/images/blueBackground.png'
+
 
 import ComingSoonMaze from '../../public/images/comingsoonmaze.png'
 import JoinWaitListbtn from '../../public/images/joinWaitListbtn.png'
@@ -56,7 +41,6 @@ import CoinStore from '../../public/images/partnership_coinstore.svg'
 import CoinFluence from '../../public/images/partnership_coinfluence.svg'
 
 export {
-  BlueBackground,
   CoinStore,
   CoinFluence,
   LinkedInIcon,
@@ -65,8 +49,6 @@ export {
   JoinWaitListbtn, 
   NavLogo, 
   LogoSectionLanding,
-  AboutNavisImg, 
-  HowToPlay, 
   WarShip, 
   WarTank, 
   CommunitySpeaker, 
@@ -75,20 +57,9 @@ export {
   WarSubmarine,
   RoadMap,
   WarTank2,
-  MobileApp,
   WarTankWithRedBG,
   WarTank3,
-  ButtonImg,
   RoadMap2,
-  GameConcept1,
-  GameConcept2,
-  GameConcept3,
-  GameConcept4,
-  GameConcept5,
-  GameConcept6,
-  MarketPlace1,
-  MarketPlace2,
-  MarketPlace3,
   AppleLogo,
   PlaystoreLogo,
   xIcon,
@@ -100,8 +71,6 @@ export {
   Team3,
   Team4,
   Roadmap,
-  PaginateLeft,
-  PaginateRight,
   MobileHamburger,
   LeftBottom,
   RightTop,

@@ -4,12 +4,9 @@ import Link from "next/link"
 import Image from "next/image"
 
 import { 
-  BlueBackground,
   RoadMap2, 
   NavLogo, 
   LogoSectionLanding, 
-  AboutNavisImg,
-   HowToPlay, 
    WarShip,
    WarTank, 
    CommunitySpeaker, 
@@ -18,17 +15,7 @@ import {
    WarSubmarine, 
    RoadMap, 
    WarTank2, 
-   MobileApp, 
    WarTank3,
-   GameConcept1,
-  GameConcept2,
-  GameConcept3,
-  GameConcept4,
-  GameConcept5,
-  GameConcept6,
-  MarketPlace1,
-  MarketPlace2,
-  MarketPlace3,
   PlaystoreLogo,
   AppleLogo,
   xIcon,
@@ -42,12 +29,9 @@ import {
   // Team2,
   // Team3,
   // Team4,
-  PaginateLeft,
-  PaginateRight,
   MobileHamburger,
   LeftBottom,
   RightTop,
-  ButtonImg,
   RightArrow
   } from "../src/utils/assets"
 import {Button} from '../src/components'
@@ -199,7 +183,7 @@ const Page = () => {
         {/* LOGO section */}
         <div
           className="md:min-h-96 bg-cover bg-center flex py-14 md:py-0 justify-center items-center " 
-          style={{ backgroundImage: `url('/images/bg2.jpeg')` }}
+          style={{ backgroundImage: `url('/images/bg3.jpeg')` }}
         >
           <div {...Animate('zoom-in', 100, 'ease-in')} className="w-[80%] md:w-[30%] h-[100px] md:h-fit">
             <Image alt="" src={LogoSectionLanding}  />
@@ -296,47 +280,47 @@ const Page = () => {
               </h5>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-10/12 mx-auto">
-              <div {...Animate('flip-left', 100, 'ease-in')} className=" px-10 py-14 cutoutEdge">
+              <div {...Animate('flip-left', 100, 'ease-in')} className="px-4 md:px-10 py-14 cutoutEdge">
                 <div className="flex justify-center mb-14">
 
                 <Image src={CommunitySpeaker} alt="" className="" />
                 </div>
-                <h4 className="font-Saira text-md font-bold leading-[42px] text-center">
+                <h4 className="font-Saira text-sm md:text-md font-bold leading-[42px] text-center">
                 Forums and Discussion Boards
                 </h4>
                 <ul className="list-disc font-Saira text-[1rem] font-normal leading-[27px]">
-                  <li>Engage in lively discussions about strategies, tactics, and the latest updates.</li>
-                  <li>Create and join threads to discuss specific aspects of the game, from ship customization to battle tactics.</li>
+                  <li className="font-normal text-[12px] md:text-[20px]">Engage in lively discussions about strategies, tactics, and the latest updates.</li>
+                  <li className="font-normal text-[12px] md:text-[20px]">Create and join threads to discuss specific aspects of the game, from ship customization to battle tactics.</li>
                 </ul>
               </div>
-              <div {...Animate('flip-left', 400, 'ease-in')} className=" px-10 py-14 cutoutEdge">
+              <div {...Animate('flip-left', 400, 'ease-in')} className=" px-4 md:px-10 py-14 cutoutEdge">
                 <div className="flex justify-center mb-14">
                   <Image src={CommunityCup} alt="" className="" />
                 </div>
-                <h4 className="font-Saira text-md font-bold leading-[42px] text-center">
+                <h4 className="font-Saira text-sm md:text-md font-bold leading-[42px] text-center">
                 Tournaments and Events
                 </h4>
                 <ul className="list-disc font-Saira text-[1rem] font-normal leading-[27px]">
-                  <li>Participate in regular tournaments to prove your naval prowess.</li>
-                  <li>Stay updated on upcoming in-game events and community challenges.</li>
+                  <li className="font-normal text-[12px] md:text-[20px]">Participate in regular tournaments to prove your naval prowess.</li>
+                  <li className="font-normal text-[12px] md:text-[20px]">Stay updated on upcoming in-game events and community challenges.</li>
                 </ul>
               </div>
-              <div {...Animate('flip-left', 700, 'ease-in')} className=" px-10 py-14 cutoutEdge">
+              <div {...Animate('flip-left', 700, 'ease-in')} className=" px-4 md:px-10 py-14 cutoutEdge">
                 <div className="flex justify-center mb-14">
                   <Image src={CommunityShield} alt="" className="" />
                 </div>
-                <h4 className="font-Saira text-md font-bold leading-[42px] text-center">
+                <h4 className="font-Saira text-sm md:text-md font-bold leading-[42px] text-center">
                 Player Spotlights
                 </h4>
                 <ul className="list-disc font-Saira text-[1] font-normal leading-[27px]">
-                  <li>Celebrate the achievements of top commanders with regular player spotlights.</li>
-                  <li>Share your own successes and strategies to inspire and guide fellow players.</li>
+                  <li className="font-normal text-[12px] md:text-[20px]">Celebrate the achievements of top commanders with regular player spotlights.</li>
+                  <li className="font-normal text-[12px] md:text-[20px]">Share your own successes and strategies to inspire and guide fellow players.</li>
                 </ul>
               </div>
             </div>
           </div>
           <div 
-            className="fixed left-5 md:left-8 top-[30%] md:p-3 !py-10 cutoutEdgeSocial z-[1] min-h-[100px] flex flex-col gap-10"
+            className="fixed left-4 md:left-5 top-[30%] md:p-3 !py-10 cutoutEdgeSocial z-[1] min-h-[100px] flex flex-col gap-10"
           >
             <Image role="link" src={xIcon} alt="" onClick={()=>window.open('https://x.com/naviswargame?t=EpROkGC7epzPanrTqvs3qw&s=08', "_blank")} className="cursor-pointer" />
             <Image role="link" src={telegramIcon} onClick={()=>window.open('https://t.me/naviswargame', "_blank")} className="cursor-pointer" alt=""  />
@@ -474,34 +458,7 @@ const Page = () => {
             </div> */}
           </div>
         </div>
-        {/* team */}
-        {/* <div className="min-h-screen bg-black py-24">
-          <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-36 md:py-16" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
-            <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">TEAM</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 w-9/12 gap-36 md:gap-7 mx-auto">
-              <div {...Animate('flip-right', 100, 'ease-in')} className="h-[300px]">     
-                <Image className="mb-3" src={Team1} alt="image"/>
-                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">JOHN DOE</h5>
-                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">EXECUTIVE DIRECTOR</p>
-              </div>
-              <div {...Animate('flip-right', 100, 'ease-in')} className="h-[300px]">     
-                <Image className="mb-3" src={Team2} alt="image"/>
-                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">JOHN DOE</h5>
-                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">EXECUTIVE DIRECTOR</p>
-              </div>
-              <div {...Animate('flip-right', 100, 'ease-in')} className="h-[300px]">     
-                <Image className="mb-3" src={Team3} alt="image"/>
-                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">JOHN DOE</h5>
-                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">EXECUTIVE DIRECTOR</p>
-              </div>
-              <div {...Animate('flip-right', 100, 'ease-in')} className="h-[300px]">     
-                <Image className="mb-3" src={Team4} alt="image"/>
-                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">JOHN DOE</h5>
-                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">EXECUTIVE DIRECTOR</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+       
         {/* Partnerships */}
         <div className="min-h-screen bg-black py-24 relative">
         <div className="absolute bottom-0 z-0 w-[500px] h-[500px]">
@@ -510,8 +467,15 @@ const Page = () => {
 
           <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-36 md:py-16 relative z-10" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
             <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">PARTNERSHIPS</h3>
-            <div className="flex justify-center gap-10">
+            <div className="flex flex-col items-center  md:flex-row justify-center gap-10">
             <Image width={250} height={250} role="link" className="" src={CoinStore} alt="partnership_coinstore" />
+            <img 
+              alt=""
+              src={'https://res.cloudinary.com/dmtcjnlev/image/upload/v1713903926/NavisWebsite/partnersWheel_frykdi.png'} 
+              className=""
+              height={350}
+              width={350}
+            />
             <Image width={250} height={250} role="link" className="" src={CoinFluence} alt="partnership_coinfluence" />
             </div>
           </div>
@@ -519,6 +483,82 @@ const Page = () => {
               <Image  src={WarSubmarine} alt="" fill className="" />
             </div>
           
+        </div>
+         {/* team */}
+         <div className="min-h-screen bg-black py-24 relative">
+          <div className="min-h-[80vh] bg-cover bg-center text-center text-white py-36 md:py-16" style={{ backgroundImage: `url('/images/gameConceptBG.png')` }}>
+            <h3 className="mb-9 pb-10 text-center text-gradient text-lg md:text-6xl font-Alien font-normal">TEAM</h3>
+            <div className="grid grid-cols-12 md:grid-cols-4 w-11/12 md:w-9/12 gap-x-36 md:gap-24 mx-auto overflow-x-scroll min-h-[350px]">
+              <div {...Animate('flip-right', 100, 'ease-in')} className="h-[300px] w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902604/NavisWebsite/team1_zrxw2a.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">SILAS.B</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">CO-FOUNDER</p>
+              </div>
+              <div {...Animate('flip-right', 150, 'ease-in')} className="h-[300px] w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902604/NavisWebsite/team2_fhbuhf.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">SEFE.O</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">CO-FOUNDER</p>
+              </div>
+              <div {...Animate('flip-right', 200, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902604/NavisWebsite/team3_okislx.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">SOGO.O</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">PROJECT MANAGER</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902605/NavisWebsite/team4_z8x12e.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">JADE.O</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]"> Content Strategist (Advisory)</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902605/NavisWebsite/team5_htyf0z.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">EVE.A</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">CONTENT CREATOR</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902605/NavisWebsite/team6_l8awpn.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">DAVUT.K</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">Partnership/Collab Manager</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902606/NavisWebsite/team7_a6rcu3.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">DAVID.A </h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">SOLUTIONS ARCHITECT</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902604/NavisWebsite/team8_ublhgw.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">OLA</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">SMART CONTRACT DEVELOPER</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902605/NavisWebsite/team9_rgtipm.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">SETH</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">MARKETING MANAGER</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902606/NavisWebsite/team10_qpnjsf.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">KIET.HO</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">SENIOR 3D DEVELOPER</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902606/NavisWebsite/team11_bxs6vp.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">LECHI.A</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">SOCIAL MEDIA MANAGER</p>
+              </div>
+              <div {...Animate('flip-right', 250, 'ease-in')} className="h-[300px]  w-fit">     
+                <img className="mb-3 h-[200px] w-[250px] md:h-auto md:w-auto" src={"https://res.cloudinary.com/dmtcjnlev/image/upload/v1713902606/NavisWebsite/team12_iqk0o9.png"} alt="image"/>
+                <h5 className="text-gradient font-Alien text-[2rem] font-normal text-center">JIDE.A</h5>
+                <p className="text-white text-center font-Saira text-sm font-normal leading-[17px]">FRONT-END DEVELOPER</p>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-[-100px] right-0 z-[1] w-[150px] h-[75px] md:w-[300px] md:h-[150px] move-accross-right">
+          <Image 
+            src={WarShip} 
+            className=""
+            fill
+            alt=""
+          />
+          </div>
         </div>
         {/* footer */}
         <footer className="bg-primary-100 text-white font-Saira">

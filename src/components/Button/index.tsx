@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import Image from "next/image";
 
-import { ButtonImg } from "@/src/utils/assets"
 
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
